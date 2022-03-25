@@ -17,3 +17,12 @@ ACER v2000 (DOS)
 </p>
 <p align="center">
 <p align="center"> 
+  
+  
+    
+  Telegard (DOS)
+   <p align="center">  
+<img src="https://ia902304.us.archive.org/7/items/telegard/preview.jpg">
+</p>
+<p align="center">
+<p align="center"> 
