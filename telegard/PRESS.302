@@ -1,0 +1,78 @@
+TELEGARD 3.02 RELEASED - TELEGARD 3.01 &
+PREVIOUS SECURITY PROBLEMS FOUND
+     
+MISSISSAUGA, ON -- July 14, 1996 -- Telegard 3.02 has been released to 
+replace Telegard 3.01 and previous versions with major security problems.
+     
+Depending on your system setup (and many different combinations of 
+settings), you are susceptible to this attack.  Telegard 3.02 patches up 
+that big problem (also includes several minor fixes).
+      
+Telegard 3.02 should be installed over all previous Telegard 2.99/3.00 
+versions-- while 3.02 is largely untested (the next release was to be 
+3.10), it is extremely important that you secure your system.  Please 
+remove Telegard 3.01 & previous versions immediately (delete them from your 
+file sections as well).
+
+Systems running 3.00/3.01 with PWE are at least more secure than those 
+without PWE.  However, even with PWE enabled, this loophole is still 
+dangerous.
+     
+
+SECURE YOUR SYSTEM IMMEDIATELY
+
+This information has been made public by an irresponsible invidual.  It is 
+vital you make the following changes to your configuration this very 
+instant (these are COMMON SENSE settings for most situations):
+
+         SysOp SL: S255XL
+       CoSysOp SL: S255XL
+
+Then download Telegard 3.02, and install over top of your current 
+configuration.
+     
+     
+MY GENERAL COMMENTS
+     
+This problem has existed for several public versions (i.e. neither the beta 
+team nor the general public have found the problem till now).  The fact 
+that it is only presently surfacing is a good indication that the problem 
+is few and far between.
+     
+That aside, I can only apologize for the problem.  I have done my best to 
+ensure that such problems don't occur, and that when they do, they are 
+promptly fixed.  Such is the case with this problem-- I found out about it 
+an hour ago, and a solution is available -now-.
+
+I am human, and I can make mistakes.  I make no apologies for either.  If 
+you can't accept that fact, don't make any negative comments, don't 
+complain -- quite frankly -- just don't say anything about this at all.
+     
+I am angry at myself for allowing this problem to slip through-- I don't 
+need anyone else harping on the issue.  I've met with my fair share of 
+ungrateful people over the last seven years, so I respectfully request you 
+don't make me regret my decision to continue Telegard . . .
+     
+If you're not satisfied with my efforts with Telegard and to stop problems 
+like this from occurring, please delete your entire Telegard directory.
+     
+     
+TO THE INDIVIDUAL WHO PUBLICLY RELEASED THIS INFORMATION
+
+I only wish that you had thought about it a little more first.  Now dozens 
+of systems are potentially at risk -- unknowingly -- and the solution can't 
+hit their systems before the problem does.
+       
+I would have credited you with finding the problem.  Instead, I now credit 
+you with creating and helping to manifest the problem.  While it has led to 
+a solution (thankfully), your tactfulness in dealing with what is 
+potentially a big problem has left a lot to desired. 
+       
+What I really want you to understand is how inappropriate it is to post 
+such information publicly -- especially while the problem is not widespread 
+and a quick-fix solution can be recommended and distributed promptly, and 
+WITHOUT endangering other systems.
+         
+I'm not really angry, just mighty disappointed.
+
+Tim

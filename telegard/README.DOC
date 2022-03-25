@@ -1,0 +1,79 @@
+        
+                  Telegard Bulletin Board Software, v3.02
+                            README Documentation
+
+                   Copyright (C) 1995,1996 by Tim Strike
+                            All Rights Reserved.
+
+     INTRODUCTION
+
+       Telegard 3.0 is finally here!
+
+       Telegard 3.02 is a major bug fix release to patch up some run-time
+       code with a security loophole.  3.02 should be immediately installed
+       on your system (see PRESS.302 for further details).
+
+       Telegard 3.01 is a minor bug fix release to patch up some run-time
+       code which was generating problems.  3.01 also fixes a number of
+       other prominent problems, and should *definately* be installed over
+       3.00.
+
+       While it has been 3+ years since the last official Telegard release, 
+       I'm proud to say that this version is a worthy successor to Telegard 
+       2.7.  It is my first official release as author of the software, and 
+       I hope that the wait was worth the effort that was placed into 
+       Telegard by myself and my entire development team (past & present).
+
+       Please print INSTALL.DOC and follow the instructions as outlined
+       *exactly*.  If you do not do this, I guarentee problems (don't skip
+       steps, don't just jump in -- READ THE DOCS, THEY ARE NOT FOR MY 
+       HEALTH!)
+       
+     CREDITS
+
+       Thanks to my entirely deserving beta team, and especially to Michael 
+       Yadron and my new cohorts, Kevin Watkins and Don Johnson.
+         
+           Michael Yadron, who has recently retired from active duty on the
+           beta team, deserves more thanks than I can ever express to him.
+           His hard work, as the organizer, the co-ordinator, the motivator 
+           and just about everything else that he was and is, kept things 
+           going in the right direction and our release would not have been 
+           made without him.  Mike, I wish you the best of luck and yes, 
+           I will talk to you soon. :)
+
+           For those of you who have missed their active participation in
+           TG_SUPPORT, I would like everyone to give a warm welcome to the
+           individuals who are replacing Mike in their new expanded 
+           positions -- Don Johnson and Kevin Watkins.  They have rather
+           big feet to fill in Michael's absense and with all their new
+           job duties too, but I'm more than confident that they will do an 
+           excellent job!  Kudos guys . . .
+
+           Thanks also to Kevin Watkins for producing (under duress) the 
+           TELEGARD.DOC documentation included with this release.  It's a
+           task that I wouldn't have wanted, and I'm more-than-glad that
+           he did them . . . :)
+
+           Other members of my beta team have come and gone with time - to
+           all the present and past members of the team, a heartfelt 
+           thanks.  Beyond all the ideas you provide, you're really just
+           a great group of people to work with.
+
+       So thanks again for all your patience.  We hope you enjoy this
+       Telegard release.
+
+       Regards, Tim Strike
+
+     CONTACT INFORMATION
+
+       Fidonet  1:259/423
+
+       Internet ts@gryn.org  *or*  4ts2@qlink.queensu.ca
+       WWW      http://qlink.queensu.ca/~4ts2
+       FTP      ftp://filebank.com/telegard
+       
+       BBS      (905)820-7273
+                2400-16,800 Dual Standard (HST/V32bis)
+                24 hours, except ZMH (4:00-5:00pm)
+                  

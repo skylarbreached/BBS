@@ -1,0 +1,298 @@
+        
+                  Telegard Bulletin Board Software, v3.02
+                           RELEASE Documentation
+
+                      Copyright (C) 1996 by Tim Strike
+                            All Rights Reserved.
+
+
+       These are just notes that I have compiled over time with regards to
+       the many questions I get asked daily.  This is not a F.A.Q., but
+       is a way of explaining how and why certain things work the way they
+       do with Telegard.  It will be continually updated.  New topics (from
+       release to release) will be marked with a "|" pipe character along
+       the left margin.
+
+       REFERENCE FILES AND DOCUMENTATION
+       
+         * Telegard includes some small reference files in /notes/, all
+           with the extension of *.REF.  These files cover various aspects
+           of the system, included ACS commands, COLOUR commands, MCI 
+           codes, MENU commands, SCRIPT commands, SYSOP FUNCTION keys, TEXT
+           files and the command line options for Telegard.
+        
+         * Telegard documentation has not been completed at the time of
+           the release of gamma-3.  Our goal is to complete the 
+           documentation for the final 3.0 release.  In the mean time, 
+           Kevin Watkins has done a fine job on the pre-release 
+           documentation, which is distributed in it's current form as 
+           TELEGARD.DOC.
+
+       
+       UTILITIES
+
+         * INDEX.EXE was not designed to be run while a user is online; 
+           this is for several reasons, but main reason is it modifies 
+           files which the online user will access at some point.  Indexing 
+           should *ONLY* be run when a user is *NOT* online.  This goes for 
+           single or multinode setups.
+
+         * USERS.EXE allows you to pack away deleted users (unlike 2.7, 
+           Telegard 3.0 does not automatically reuse deleted accounts).  
+           USERS.EXE also allows sorting of the userbase -- first it sorts
+           by security level, and then it sorts by user name within each
+           security level echelon.
+
+
+       MAINTENANCE
+
+         * Telegard is, for the most part, self-maintaining.  The index 
+           files are designed to work without interruption and most of the
+           data files automatically handle packing and removal of unused
+           records.
+
+           That said, the Telegard index files do require some maintenance
+           to maintain top performance.  It is recommended that you:
+
+                (i) Run INDEX SORT ALL on a nightly schedule 
+               (ii) Run INDEX BUILD ALL on a weekly schedule, if not
+                        every couple of days
+
+
+       LANGUAGES
+       
+         * Telegard 3.0 no longer has an internal strings list.  All 
+           strings are stored in an external language file (the default of
+           which is ENGLISH.TXT in /language/).  To change this file, use
+           a text editor which does *not* strip spaces from the end of a
+           line (Qedit with said option disabled works well).  After 
+           changing any language file, you must recompile it.  From your
+           /language/ directory, run "C:\BBS\LANGUAGE\MAKELANG <language>"
+           and this will compile your new language strings.
+           
+         * The language system is fairly extensive, and just about every
+           user-viewable string can be configured in any manner you like.
+           For more information, see the header in ENGLISH.TXT, and don't
+           forget about the *.REF files in /notes/.
+
+       
+       MESSAGES
+       
+         * Telegard uses JAM and Squish message bases because they are 
+           standardized.  Standardized formats allow external utilities to 
+           easily work with Telegard, without the need of a conversion 
+           program (/a la TELEMAIL).  For these reasons as well, I have not 
+           taken the time to develop a message base packer for Telegard -- 
+           it's development time that I just don't have.
+           
+           There are several external packers available -- some with 
+           freeware/evaluation packages, others with shareware packages:
+           
+               Gecho 1.10+       Registered Only    MBUTIL     JAM
+               FastEcho 1.45a    Shareware          FEUTILS    JAM
+               Fmail 1.02g       Shareware          FTOOLS     JAM
+               Squish 1.11       Shareware          SQPACK     Squish
+         
+         * File attaches are enabled in Telegard, but the popular JAM 
+           tossers do not support or do not correctly support incoming
+           and outgoing messages.  I suggest limiting attaches to local
+           bases *ONLY* for now.
+
+         * Editing of messages will *not* be added to Telegard.  I have my 
+           personal reasons, and while I realize that it is an often 
+           requested feature, I refuse to submerge my values for others on 
+           everything -- I will implement some features I don't agree with, 
+           this won't be one of them!
+           
+           Setup an external SysOp editor (TimEd, GoldEd, etc) to the 
+           editing of messages if you so desire.  Or export/capture the 
+           message, delete the post, and resend it.
+       
+     |   * Message bases only update the lastread pointer if using the
+     |     NEWSCAN option.  This is done *on purpose*.  Reading forwards
+     |     through a base, or for that matter, reverse, would cause the
+     |     highread to be set when it wasn't meant to be set.  This is not
+     |     a bug, and infact, is a rather useful and powerful feature 
+     |     (which I won't change now or in the future -- sorry).
+
+         * Internal full screen editing will *not* be added to Telegard in 
+           the near future.  My development time is limited to new features 
+           -- since many FSE programs already exist, some with extended TG3 
+           support, I refuse to re-invent the wheel while I have other 
+           areas of concern.                                         
+         
+         * However, Telegard works quite well with external FSE programs!
+           Telegard 3.0 has been tested with IceEdit (v1.50, Ice 
+           Technologies, 1:259/912), Gedit (v2.10, The Developers Network, 
+           1:170/303) and QuickEd (v1.nn, Dror Tirosh).  Other FSE programs 
+           have not been tested, and may not work that well with Telegard
+           (i.e. TopEd and it's awkward multinode configuration/expectations)
+           
+
+       PROTOCOLS AND ARCHIVERS (and for that matter, MODEMS)
+
+         * Telegard uses an advanced setup mechanism for protocols, 
+           archivers and modems.  We provide working setups which have been 
+           tested for the most popular products, and allow you to quickly 
+           import these setups and us as-is.  Most of these setups do not 
+           require any form of modification.
+
+           To import the release setups for protocols, archivers and 
+           modems, goto the respective area, select the item to define, 
+           select option (!)Definition Files, select (I)mport and select 
+           the correct item to import.  Telegard gamma-3 also prompts when 
+           adding/deleting these items if you wish to import a pre-define 
+           definition.
+
+           If at all possible, DO THIS.  It will save you many headaches
+           when trying to setup these external programs on your system.
+        
+         * LHA troubleshooting -- If you are using LHA/LZH on your system, 
+           make sure you run a version which is compatible with extracting 
+           to a specific path.  I personally use LHA 2.05.  If you have 
+           problems unpacking mail/files from an LHA archive -- then try 
+           changing ~AP to ~AP\ in the definition, and if it *still* 
+           doesn't work, try removing ~AP entirely from the definition.
+
+         * RAR troubleshooting -- RAR encrypted archive handling (archives 
+           w/ file passwords) is _very_ poor.  To ensure that RAR does not
+           mess up files on your system, use the RAR definition included 
+           with Telegard -- it has been tested with version 1.54/1.55.
+
+         * DSZ/GSZ configuration -- If you are using non-standard port 
+           setups for your communications, then you will need to update 
+           your DSZ/GSZ protocol definitions.  Change "PORT ~CP" to "PORTX 
+           ~CJ,~CI" and that should alleviate the problems.  Make sure that 
+           within Telegard you have your modem BASE I/O ADDRESS and IRQ set 
+           properly as well (single nodes -> Config.Modem, multiple nodes 
+           -> Manager.Nodes.Modem).
+
+         * BIMODEM troubleshooting -- don't bother.  BiModem is *not* worth
+           the effort because it has poor error handling and is prone to
+           problems.  If you really must use BiModem, then set it up from
+           the docs as if you were using DSZ compatibility, and then use
+           the DSZ definition as a base definition, updating only the
+           protocol command lines and description.
+
+         * Protocol troubleshooting, in general -- There are several things
+           to check when troubleshooting protocol problems:
+           
+                 (i) Are you using non-standard ports?  If YES, you will 
+                     likely need to modify your protocols so they know 
+                     this.
+
+                (ii) Have you set the log options correctly?  Check by
+                     looking at a imported definition for examples -- or
+                     better yet, *use* an imported definition.  If you have
+                     a SET DSZLOG= statement *outside* of Telegard, remove
+                     it so as not to interfere with protocol SET statement.
+
+               (iii) Is your environment size big enough for the SET=
+                     statement used by the protocol?  DOS defaults the 
+                     environment to 256 bytes.  If you have increased your
+                     environment or are getting close to the 256 byte mark 
+                     outside of Telegard, then you need to increase the 
+                     environment *inside* Telegard -- setup environment 
+                     size under SystemConfig.e(X)ternal.
+
+
+       MULTINODE CONSIDERATIONS
+      
+     |   * When loading Telegard in a multinode environment from a batch 
+     |     file, I suggest including the -O command line parameter.  This
+     |     assumes that the node specified on the command line *is* the
+     |     correct node number, and will override any previous node status
+     |     left from a system crash or whatnot.
+
+     |     The main reason that -O was *not* made the default, was that it
+     |     was assumed that the batch files could easily pass -O to 
+     |     override, while a local user typing 'TELEGARD -Nnn' to boot the
+     |     system would not neccessarily type the correct node number, thus
+     |     overriding an active node, and killing the process.  Thus, 
+     |     automated processes like .BAT files loading Telegard on a known,
+     |     specific node, should use -O to override the settings.
+
+     |   * Door drop files are stored in /TEMPnnn/ under multinode systems.
+     |     When running doors under a multinode system, it is suggested 
+     |     that you look at several things:
+
+     |          (a) Can the door handle more than one node at once?  If 
+     |              not, you will need to use the script SINGLE.SCR -- read
+     |              it for implementation instructions.
+     |          (b) If the door can handle more than one node, it *should*
+     |              have the ability to point to the directory containing 
+     |              the door drop files -- use /TEMP%1/ with the ~CN 
+     |              command in your batch file to pass the node directory.
+
+
+       OPERATING SYSTEM LIMITATIONS
+
+         * DOS directory limits - DOS and most operating systems can't 
+           handle a large number of files in any given directory.  Remember 
+           this and try and keep your directories limited to a smaller 
+           number of files; each JAM/Squish area requires 5 data files, and 
+           thus storing 100 areas in one directory results in 500 files.
+          
+           Separating the files into categories (most notably, Networks) 
+           can cut down on access time for those files.  It's more 
+           significant on multinode systems, but I suggest keeping the 
+           number of files to somewhere between 100 and 150, meaning keep 
+           the number of areas per directory to around 30.
+        
+     |   * Telegard has very much been designed for DOS 8+3 filename type
+     |     systems.  To change this would require some of the guts of the
+     |     system to be removed and reworked, and in all honesty, I'm not
+     |     going to make the effort.  File systems which use longer 
+     |     filenames can also use 8+3 format -- so use that format for BBS
+     |     related files.  Windows '95 users can use the SHORTFILE name for
+     |     backwards compatibility.
+
+     | OTHER ISSUES
+     | 
+     |   * There is no shuttle logon menu, nor will I ever add one to the
+     |     Telegard code.  It's a personal issue, and I just don't agree 
+     |     with shuttle logon processes.  If you wish to add a shuttle 
+     |     logon, use a script file (top of LOGON.SCR, or a seperate 
+     |     shuttle logon), or use a logon menu.  Please do not ask me to 
+     |     code one into Telegard; your message will be deleted and I will 
+     |     not respond.  Sorry.
+
+
+       INTERESTING TID-BITS
+
+         * So you want to display certain files on certain dates (01/01, 
+           12/25, etc.) -- well, this is very easy with Telegard and the
+           scripting file.  For instance, adding the following line to
+           your LOGON.SCR will allow you to display these timely files 
+           automatically:        
+           
+     |          FILEDISPLAY ~EP/-~EL5~SJ
+        
+           Will then display any file in the form of mm-dd.* on that 
+           particular date.  So 01-01.* is display on 01/01, 12-25.* is 
+           displayed on 12/25, etc.
+
+     |   * To parse IF/IFNOT statements for empty strings (""), try
+     |     putting a dummy character on either side of the test: i.e.
+     |     IF "!~&1" "!" will parse only if ~&1 == NULL, and replaces
+     |     the logical statement of IF "~&1" "" which most of us would try.
+     |     This is similar to the logical problems in .BAT files and the 
+     |     token based parsing of the current script language.
+
+         * To reset your time logging graphs, delete the file TIMELOG.DAT
+           when no user is online and all nodes are sitting in DOS.  This 
+           will start new graphs the next time a user logs on.
+
+       
+       Regards, Tim Strike
+        
+       Fidonet  1:259/423
+
+       Internet ts@gryn.org  *or*  4ts2@qlink.queensu.ca
+       WWW      http://qlink.queensu.ca/~4ts2
+       FTP      ftp://filebank.com/telegard
+       
+       BBS      (905)820-7273
+                2400-16,800 Dual Standard (HST/V32bis)
+                24 hours, except ZMH (4:00-5:00pm)
+                  
