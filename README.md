@@ -29,9 +29,9 @@ ACER v2000 (DOS)
    
    
     
-    Excalibur 
+    Fastline
    <p align="center">  
-<img src="https://media.demozoo.org/screens/o/6d/30/30ed.188948.png ">
+<img src="https://ia802807.us.archive.org/6/items/c64_Fastline_BBS_LAXITY/Fastline_BBS_LAXITY_screenshot.gif">
 </p>
 <p align="center">
 <p align="center"> 
