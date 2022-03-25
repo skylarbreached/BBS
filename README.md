@@ -29,7 +29,7 @@ ACER v2000 (DOS)
    
    
     
-    Fastline
+    Fastline (C64)
    <p align="center">  
 <img src="https://ia802807.us.archive.org/6/items/c64_Fastline_BBS_LAXITY/Fastline_BBS_LAXITY_screenshot.gif">
 </p>
