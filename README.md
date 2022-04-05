@@ -1,6 +1,8 @@
 # BBS
 Jake's BBS project  
   
+  
+  Currently in progress
     
 ACER v2000 (DOS)
 <p align="center">  
